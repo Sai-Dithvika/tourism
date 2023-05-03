@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign up Form Demo</title>
+</head>
+<body>
+  <div class="login-wrapper">
+    <form  id="form" class="form">
+      <h2>Signup</h2>
+      <div class="input-group">
+        <input type="text"  id="loginUser" required >
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group"> 
+        <input type="password"  id="loginPassword" required>
+        <label for="loginPassword">Password</label>
+      </div>
+      <input  type="submit" id="button" value="Signup" class="submit-btn">
+      <a href="dithvika.html" class="forgot-pw">Already a User?</a>
+    </form>
+</div>
+<script>
+  document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    let user=document.getElementById("loginUser").value;
+    let pass=document.getElementById("loginPassword").value;
+     localStorage.setItem(user,pass);
+  if(localStorage.getItem(user)===pass){
+    alert("Signup sucessfull");}
+  });
+</script>
+</body>
+</html>
