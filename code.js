@@ -5,7 +5,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
   if (localStorage.getItem(user) === pass) {
       alert("Hello, " + user + "!");
       console.log(localStorage.getItem(user));
-      window.location.href = "index.html";
+      window.location.href = "home.html";
   } else {
       alert("Wrong password or user not found");
       console.log(localStorage.getItem(user), pass);
