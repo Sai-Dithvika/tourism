@@ -7,6 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('event', 'login', {
+    'event_category': 'User',
+    'event_label': user,
+    'value': 1
+});
+
 
     gtag('config', 'G-GHBYTKH0R9');
   </script>
