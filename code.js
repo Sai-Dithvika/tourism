@@ -5,6 +5,9 @@ document.getElementById("form").addEventListener("submit", function(event) {
   if (localStorage.getItem(user) === pass) {
       alert("Hello, " + user + "!");
       console.log(localStorage.getItem(user));
+      firebase.analytics().logEvent('login', {
+        method: 'custom'
+    });
       window.location.href = "home.html";
   } else {
       alert("Wrong password or user not found");

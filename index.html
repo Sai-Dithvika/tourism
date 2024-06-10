@@ -7,14 +7,25 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('event', 'login', {
-    'event_category': 'User',
-    'event_label': user,
-    'value': 1
-});
-
-
     gtag('config', 'G-GHBYTKH0R9');
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics-compat.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyC-uxb2OXxBGUV0Nc8Cx-xpfu3foYmeJWc",
+      authDomain: "tourism-8ef4d.firebaseapp.com",
+      projectId: "tourism-8ef4d",
+      storageBucket: "tourism-8ef4d.appspot.com",
+      messagingSenderId: "320562823008",
+      appId: "1:320562823008:web:a3af3e9887f8f8a9206805",
+      measurementId: "G-JR5Q895EXQ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
